@@ -4,11 +4,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.lukegb.mojo</groupId>
-  <artifactId>gitdescribe-maven-plugin</artifactId>
+  <artifactId>gitdescribe-maven-plugin-barteks2x</artifactId>
   <packaging>maven-plugin</packaging>
   <name>Git Describe Maven Plugin</name>
   <version>1.4-SNAPSHOT</version>
-  <url>https://github.com/lukegb/GitDescribe-Maven-Plugin/</url>
+  <url>https://github.com/Barteks2x/GitDescribe-Maven-Plugin/</url>
 
   <inceptionYear>2011</inceptionYear>
 
