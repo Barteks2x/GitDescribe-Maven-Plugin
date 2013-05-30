@@ -75,7 +75,7 @@ public class GitDescribeMojo
     /**
      * String to prepend to git describe/shorttag output
      *
-     * @parameter default-value="git-"
+     * @parameter default-value=""
      */
     private String outputPrefix;
 
