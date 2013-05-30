@@ -181,9 +181,9 @@
   </reporting>
 
   <scm>
-    <url>https://github.com/lukegb/GitDescribe-Maven-Plugin</url>
-    <connection>scm:git:https://github.com/lukegb/GitDescribe-Maven-Plugin.git</connection>
-    <developerConnection>scm:git:https://github.com/lukegb/GitDescribe-Maven-Plugin.git</developerConnection>
+    <url>https://github.com/Barteks2x/GitDescribe-Maven-Plugin</url>
+    <connection>scm:git:https://github.com/Barteks2x/GitDescribe-Maven-Plugin.git</connection>
+    <developerConnection>scm:git:https://github.com/Barteks2x/GitDescribe-Maven-Plugin.git</developerConnection>
   </scm>
   
 </project>
