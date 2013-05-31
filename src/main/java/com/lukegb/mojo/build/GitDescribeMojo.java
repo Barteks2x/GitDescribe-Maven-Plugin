@@ -20,6 +20,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -115,6 +116,20 @@ public class GitDescribeMojo
     private String dirtyMark;
 
     /**
+     * If true, pass the `--match=` flag to git-describe.
+     *
+     * @parameter default-value=false
+     */
+    private boolean match;
+
+    /**
+     * If set, pass this to a `--match=` argument to git.
+     *
+     * @parameter default-value="*"
+     */
+    private String matchValue;
+
+    /**
      * Perform the task for which this plugin exists.
      * i.e. try to shove the Git Describe property into Maven
      */
@@ -167,9 +182,17 @@ public class GitDescribeMojo
      */
     private String[] buildDescribeCommand()
     {
-        return dirty
-           ? new String[] {"git", "describe", "--dirty=" + dirtyMark}
-           : new String[] {"git", "describe"};
+	ArrayList<String> gitArgs = new ArrayList<String>() {{
+		add("git");
+		add("describe");
+	}};
+	if ( dirty ) {
+		gitArgs.add("--dirty=" + dirtyMark);
+	}
+	if ( match ) {
+		gitArgs.add("--match=" + matchValue);
+	}
+	return gitArgs.toArray(new String[0]);
     }
 
     /**
